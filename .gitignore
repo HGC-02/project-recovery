@@ -1,0 +1,13 @@
+# shit by rust
+src-rust/target/
+target/
+#img of sys 
+*.img
+*.iso
+*.qcow2
+*.bin
+
+# temp mount and log
+mnt_test/
+*.log
+.vscode/
