@@ -1,5 +1,0 @@
-EARLYHOOKS="udev"
-HOOKS="udev keymap consolefont"
-LATEHOOKS=""
-CLEANUPHOOKS="udev"
-EMERGENCYHOOKS=""
