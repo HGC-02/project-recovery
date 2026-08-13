@@ -1,16 +1,32 @@
+# ask
 echo 'path to file:'
 x=read
+
+# ask/
+
+#var
 y=$(pwd)
-z=
+t='temp'
+
+#var/
 
 
-if [ -f ]
+if [ ! -d "$t" ]; then
+    mkdir "$t"
+fi
+
 if [ -f "$x"]; then
     if [ -xwr "$x" ]; then
-        if [ grep -q *img "$x" ]; then
-            python3 funtion/unpack_bootimg.py --boot_img "$x" --out "$y"
-            if [ grep -q *.cpio "$y" ]; then
-                cd 
+        if [ ls "$x"|grep -q *img  ]; then
+            python3 funtion/unpack_bootimg.py --boot_img "$x" --out "$t"
+            cd "$t"
+            if [[ ls|grep -q '.cpio' && find ramdisk.cpio]]; then
+            cpio -imv < $( find *.cpio )
+            
+
+                
+
+            fi
         else 
             echo 'not img file'
         fi
