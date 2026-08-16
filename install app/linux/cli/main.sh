@@ -1,6 +1,6 @@
 # ask
 echo 'path to file:'
-x=read
+read x
 
 # ask/
 
